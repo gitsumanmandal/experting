@@ -6,6 +6,7 @@ var path = require('path');
 var routes = require("./routes/routes.js");
 var app = express();
 
+app.set('port', (process.env.PORT || 5000));
 app.use(cookieParser());
 app.use(session({secret: "Shh, its a secret!"}));
 
@@ -15,6 +16,6 @@ app.use(express.static(path.join(__dirname, 'frontend')));
 
 routes(app);
 
-var server = app.listen(3000, function () {
+var server = app.listen(app.get(port), function () {
     console.log("app running on port.", server.address().port);
 });
