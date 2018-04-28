@@ -13,7 +13,7 @@ function callAPI(){
   var queryParam = {
     word: wordInput.toLowerCase()
   };
-  $.get("http://localhost:3000/getDefinition",queryParam, function(data, status){
+  $.get("http://localhost:5000/getDefinition",queryParam, function(data, status){
     document.getElementById("wordsearch").innerHTML = wordInput;
     if(data.length > 0){
       document.getElementById("type").innerHTML = data[0].partOfSpeech;
