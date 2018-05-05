@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Experting</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body id="account-body" class="mobile-align" style="background-color: #350952;visibility: hidden;" onload="bodyLoad()">
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" data-toggle="modal" data-target="#profile">Profile</a>
+    <a href="#" data-toggle="modal" data-target="#settings">Settings</a>
+    <a href="#" data-toggle="modal" data-target="#about">About</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </div>
+
+  <div class="header-div">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="option-mobile" style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <label class="header-title">Experting</label>
+      </div>
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <label class="header-menu" id="ac-name"></label>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span style="color:white;" class="glyphicon glyphicon-log-in"></span>
+          </a>
+          <ul class="dropdown-menu custom-ul">
+            <li>
+              <a href="#" data-toggle="modal" data-target="#profile">Profile</a>
+            </li>
+            <li>
+              <a href="#" data-toggle="modal" data-target="#settings">Settings</a>
+            </li>
+            <li>
+              <a href="#" data-toggle="modal" data-target="#about">About</a>
+            </li>
+            <li>
+              <a href="#" onclick="logout()">Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div style="color: white;" class="row">
+      <div class="col-sm-6 div-d1-customized" id="div1">
+        <div class="row form-group">
+          <div class="padding-10-customized col-sm-10">
+            <label class="label-xlarge-customized padding-15-customized" for="word">Drop your word here</label>
+            <input type="text" class="form-control input-box-customized label-large-customized" id="word" />
+          </div>
+          <div class="padding-10-customized col-sm-2">
+            <button type="button" class="btn btn-primary search-button-customized label-large-customized" onclick="callAPI()">Search</button>
+          </div>
+        </div>
+        <div style="text-align: left;" id="resultsection">
+          <label class="label-xlarge-customized" id="wordsearch"></label>
+          <br/>
+          <label class="label-italic-customized label-larger-customized" id="type"></label>
+          <br/>
+          <label class="label-medium-customized" id="mean1"></label>
+          <br/>
+          <label class="label-medium-customized" id="mean2"></label>
+          <br/>
+          <label class="label-medium-customized" id="mean3"></label>
+          <br/>
+          <label class="label-medium-customized" id="mean4"></label>
+          <br/>
+          <label class="label-medium-customized" id="mean5"></label>
+          <br/>
+          <label class="label-medium-customized" id="mean6"></label>
+          <br/>
+          <label class="label-medium-customized" id="mean7"></label>
+          <br/>
+          <label class="label-medium-customized" id="mean8"></label>
+          <br/>
+          <label class="label-medium-customized" id="mean9"></label>
+          </br>
+          <label class="label-medium-customized" id="mean10"></label>
+        </div>
+      </div>
+      <div class="col-sm-6 div-d2-customized" id="div2">
+        <div class="row form-group">
+          <div class="padding-10-customized col-sm-10">
+            <label class="label-xlarge-customized padding-15-customized" for="learned">Find what you have learned</label>
+            <input type="text" class="form-control input-box-customized label-large-customized" id="learned" />
+          </div>
+          <div class="padding-10-customized col-sm-2">
+            <button type="button" class="btn btn-primary search-button-customized label-large-customized" onclick="fetchLearned()">Search</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 list-group">
+            <div id="resultsectionLearn">
+            </div>
+            <br/>
+            <div class="day-div" id="dayword">
+              <label class="label-medium-customized day-data" id="daydata">Word of the day</label>
+              <br/>
+              <label class="label-xlarge-customized padding-15-customized make-button" onclick="callAPINew()">Heterogenesis</label>
+              <br/>
+              <label class="label-medium-customized" id="mean1">Clck the word to learn</label>
+            </div>
+          </div>
+          <br/>
+          <div style="text-align: left;" id="resultsectionLearnSide" class="col-sm-6 list-group backdrop-customized">
+            <div style="text-align: center;">
+              <label class="label-medium-customized no-data" id="nodata">No data loaded</label>
+              <br/>
+            </div>
+            <label class="label-xlarge-customized" id="wordsearch1"></label>
+            <br/>
+            <label class="label-italic-customized label-larger-customized" id="type1"></label>
+            <br/>
+            <label class="label-medium-customized" id="mean11"></label>
+            <br/>
+            <label class="label-medium-customized" id="mean21"></label>
+            <br/>
+            <label class="label-medium-customized" id="mean31"></label>
+            <br/>
+            <label class="label-medium-customized" id="mean41"></label>
+            <br/>
+            <label class="label-medium-customized" id="mean51"></label>
+            <br/>
+            <label class="label-medium-customized" id="mean61"></label>
+            <br/>
+            <label class="label-medium-customized" id="mean71"></label>
+            <br/>
+            <label class="label-medium-customized" id="mean81"></label>
+            <br/>
+            <label class="label-medium-customized" id="mean91"></label>
+            </br>
+            <label class="label-medium-customized" id="mean101"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">Copyright Reserved @Experting 2018</div>
+
+  <!-- Profile Modal -->
+  <div class="modal fade" id="profile" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">User Profile</h4>
+        </div>
+        <div class="modal-body">
+          <label>Name</label>
+          <p id="uname"></p>
+          <label>User ID</label>
+          <p id="uid"></p>
+          <label>Email</label>
+          <p id="emailid"></p>
+          <label>Phone Number</label>
+          <p id="unum"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div class="modal fade" id="settings" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">User Settings</h4>
+        </div>
+        <div class="modal-body">
+          <p>Change Name</p>
+          <p>Change User ID</p>
+          <p>Update Email</p>
+          <p>Update Phone Number</p>
+          <p>Change Password</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- About Modal -->
+  <div class="modal fade" id="about" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">About</h4>
+        </div>
+        <div class="modal-body">
+          <label>Product Name</label>
+          <p>Experting</p>
+          <label>Product Version</label>
+          <p>Version @1.0 (Beta)</p>
+          <label>Product Owner</label>
+          <p>Suman Mandal</p>
+          <label>Product Description</label>
+          <p>An application to search meaning of english words and also to track a user's learning activity to enhance the vocabulary
+            of the user</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

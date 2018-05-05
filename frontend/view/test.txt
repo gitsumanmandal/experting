@@ -1,6 +1,0 @@
-http://api.wordnik.com/v4/word.json/field/definitions?limit=200&includeRelated=true&sourceDictionaries=all&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5
-http://api.wordnik.com/v4/word.json/field/definitions?limit=200&includeRelated=true&sourceDictionaries=all&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5
-http://api.wordnik.com/v4/word.json/field/definitions?limit=200&includeRelated=true&sourceDictionaries=all&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5
-
-npm install --save express-session --> USED
-npm install cookie-parser --> USED
