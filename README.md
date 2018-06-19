@@ -1,9 +1,16 @@
 # experting
+
 Application to expertise in English vocabulary
 
-1. NodeJS app with ExpressJS integration
-2. Application deployed in Heroku
-3. This is a UNRELEASED version (i.e, work under development, deployed application in Heroku doesn't guaranty service as expected by the application should have provided)
+Application Usage -
 
-Link to the application -
-https://experting.herokuapp.com/view/
+1. It can be used to master english words, you are given facility to track how many times you have read a particular word and mentaly prepare yourself wether you have mastered it or not
+2. Daliy few new words shows up in application which enhances the vocabulary
+
+Technolgy -
+
+1. NodeJS app with ExpressJS integration
+2. It's a mobile responsive application, so it can be deplyed directly to cordova platform
+3. This is a UNRELEASED version
+
+Free application to learn development on NodeJS, ExpressJS
