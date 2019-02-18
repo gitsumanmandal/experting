@@ -1,16 +1,40 @@
 # experting
+An application to learn and expertise English Vocabulary. It helps you to remember words, also one can see how many time he/she has learned the word so that one can keep track of his/her pace of learning and set level of learning
 
-Application to expertise in English vocabulary
+# Technology Stack
+For front end development, normal HTML, CSS, JS, JQuery is there, along with Bootstrap.
 
-Application Usage -
+For backend development, Node JS is used, with Express JS framework.
 
-1. It can be used to master english words, you are given facility to track how many times you have read a particular word and mentaly prepare yourself wether you have mastered it or not
-2. Daliy few new words shows up in application which enhances the vocabulary
+As datastore MySQL DB is used
 
-Technolgy -
+# Deployment Guide
+Download the entire project and place it in a particular file (for example, place it under DEMO folder)
 
-1. NodeJS app with ExpressJS integration
-2. It's a mobile responsive application, so it can be deplyed directly to cordova platform
-3. This is a UNRELEASED version
+OR
 
-Free application to learn development on NodeJS, ExpressJS
+use the git clone command to clone it to a particular folder (for now, let's place it in DEMO folder), such as-
+
+`git clone https://github.com/gitsumanmandal/experting DEMO_folder_path`
+
+and then run the below commands -
+
+`npm install`
+
+`npm start`
+
+Then hit `localhost:5000` into any browser to launch the application
+
+# Prerequisite
+1. You must have installed NODE JS
+2. Point to your local server accordingly to the free port (here in application it is set to localhost with port 5000)
+
+# Deployed Live
+You may find the deployed product [HERE](https://experting.herokuapp.com/) <br/>
+This is a Free Heroku App Server
+
+# Summary
+One can use this tool for above-mentioned purpose as well as for education of Full Stack Application Development using Node JS, Express JS
+
+# Author
+Suman Mandal
